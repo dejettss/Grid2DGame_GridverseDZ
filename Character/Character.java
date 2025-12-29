@@ -37,9 +37,7 @@ public abstract class Character {
         System.out.println("Speed: " + speed + " | Handling: " + handling);
         System.out.println("Lives: " + lives + " | Discs: " + discsOwned);
     }
-}
-
-private long lastDiscThrowTime = 0;
+    private long lastDiscThrowTime = 0;
 
 public boolean canThrowDisc() {
     return System.currentTimeMillis() - lastDiscThrowTime >= 5000
@@ -59,5 +57,9 @@ public void loseLife(double amount) {
     lives -= amount;
     if (lives < 0) lives = 0;
 }
+}
+
+
+
 
 
