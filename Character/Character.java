@@ -24,6 +24,12 @@ public abstract class Character {
         this.level = 1; //We hardcode this to 1 because every new character starts at Level 1
     }
 
+    public String getName() { return name; }
+    public double getSpeed() { return speed; }
+    public double getHandling () { return handling; }
+    public int getLives () { return  lives; }
+    public int getDiscsOwned () { return discsOwned; }
+    public int getLevel () { return level; }
 
 
     public void displayInfo() {
@@ -32,3 +38,4 @@ public abstract class Character {
         System.out.println("Lives: " + lives + " | Discs: " + discsOwned);
     }
 }
+
