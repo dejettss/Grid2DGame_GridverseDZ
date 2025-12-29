@@ -1,0 +1,4 @@
+Clu,Gold,Impossible,1000,20.0,0.95,0.99
+Rinzler,Red,Hard,500,15.0,0.80,0.75
+Sark,Yellow,Medium,100,10.0,0.50,0.40
+Koura,Green,Easy,10,5.0,0.10,0.10

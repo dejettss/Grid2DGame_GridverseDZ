@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class CharacterLoader {
 
     public static Character loadCharacter(String chosenName) {
-
-        String path = "C:\\Users\\thett\\OneDrive\\Desktop\\Programming\\character.txt";
-        File file = new File(path);
-
+        
+        // FIX: Use relative path (just the filename) instead of a specific C:\Users path
+        // Change this line:
+        File file = new File("character.txt");
         try {
             Scanner scanner = new Scanner(file);
 
@@ -44,10 +44,11 @@ public class CharacterLoader {
             scanner.close();
 
         } catch (FileNotFoundException e) {
-            System.out.println("Error: Could not find file at: " + file.getAbsolutePath());
-            System.out.println("Make sure 'character.txt' is in the top level of your project folder.");
+            System.out.println("Error: 'character.txt' not found.");
+            System.out.println("Current folder is: " + System.getProperty("user.dir"));
+            System.out.println("Make sure the .txt file is in this folder!");
         } catch (NumberFormatException e) {
-            System.out.println("Error: The file contains text (like 'Moderate') but the code expects a Number.");
+            System.out.println("Error: The text file has invalid numbers.");
         }
 
         return null;
