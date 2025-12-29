@@ -1,5 +1,3 @@
-import java.sql.SQLOutput;
-
 public abstract class Character {
     protected String name;
     protected String color;
@@ -38,4 +36,5 @@ public abstract class Character {
         System.out.println("Lives: " + lives + " | Discs: " + discsOwned);
     }
 }
+
 
