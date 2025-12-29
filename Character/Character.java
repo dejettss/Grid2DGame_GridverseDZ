@@ -39,3 +39,25 @@ public abstract class Character {
     }
 }
 
+private long lastDiscThrowTime = 0;
+
+public boolean canThrowDisc() {
+    return System.currentTimeMillis() - lastDiscThrowTime >= 5000
+           && discsOwned > 0;
+}
+
+public void recordDiscThrow() {
+    lastDiscThrowTime = System.currentTimeMillis();
+    discsOwned--;
+}
+
+public void addDisc() {
+    discsOwned++;
+}
+
+public void loseLife(double amount) {
+    lives -= amount;
+    if (lives < 0) lives = 0;
+}
+
+
